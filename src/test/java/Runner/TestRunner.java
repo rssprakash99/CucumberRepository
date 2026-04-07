@@ -1,20 +1,22 @@
 package Runner;
 
+import io.cucumber.junit.Cucumber;
+import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
-
-import cucumber.api.CucumberOptions;
-import cucumber.api.junit.Cucumber;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-		features = "src\\test\\java\\features\\TaggedHooks.feature",
-		glue = "stepDefinations",
-		strict = true,
-		format = {"pretty", "html:test-output", "json:json_output/cucumber.json","junit:junit_xml/cucumber.xml"},
-		monochrome = true,
-		dryRun = false,
-        tags ="WorkFlowSample"
-		)
+        features = "src/test/java/features/TaggedHooks.feature",
+        glue = "stepDefinations",
+        plugin = {
+                "pretty",
+                "html:target/cucumber-report.html",
+                "json:target/cucumber.json",
+                "junit:target/cucumber.xml"
+        },
+        monochrome = true,
+        dryRun = false,
+        tags = "@Second"
+)
 public class TestRunner {
-
 }
