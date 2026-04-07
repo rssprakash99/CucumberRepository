@@ -11,8 +11,8 @@ public class BrowserStackConfig {
 
     public static WebDriver getDriver() throws Exception {
 
-        String USERNAME = "saisuryaprakashr_XgrWHM";
-        String ACCESS_KEY = "K4Dfoppz5jqzi8QyCT4G";
+        String USERNAME = System.getenv("BROWSERSTACK_USERNAME");
+        String ACCESS_KEY = System.getenv("BROWSERSTACK_ACCESS_KEY");
 
         ChromeOptions options = new ChromeOptions();
         options.setCapability("browserName", "Chrome");
