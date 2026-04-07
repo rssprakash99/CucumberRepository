@@ -1,5 +1,8 @@
 Feature: Free CRM application deals creation feature
-Scenario: Deals creation  in CRM application 
+
+
+  @WorkFlowSample
+  Scenario: Deals creation  in CRM application
 Given User is on Deals page
 Then User creates deals as per his data
 Then User saves the data
