@@ -12,7 +12,8 @@ import cucumber.api.junit.Cucumber;
 		strict = true,
 		format = {"pretty", "html:test-output", "json:json_output/cucumber.json","junit:junit_xml/cucumber.xml"},
 		monochrome = true,
-		dryRun = false
+		dryRun = false,
+        tags ="WorkFlowSample"
 		)
 public class TestRunner {
 
